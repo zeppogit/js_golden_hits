@@ -137,11 +137,16 @@ if (passwords.includes(search) ) {
 }
 } while (test);
 
+//Newsletter sign up
 
-//FORMATTING FUNCTIONS
+const emailInput = document.getElementById("email");
+
 //   Validating email address
 
 function isValidEmail(email) {
     return /^[^@]+@[^@.]+\.[a-z]+$/i.test(email);  
 }
      
+
+//listener
+emailInput.addEventListener("input", createListener(isValidEmail));
