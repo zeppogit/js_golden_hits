@@ -119,7 +119,7 @@ calendar.innerHTML = js_html;
 
 //   PASSWORD CHECK  ///////////////////////
 
-const passwords = ['code2lou$', 'pw4codeLou', 'password1']; /* declare acceptable passwords */
+const passwords = ['code2lou$', 'pw4codeLou', 'password1', '1']; /* declare acceptable passwords */
 let message;
 let test;
 
@@ -136,3 +136,12 @@ if (passwords.includes(search) ) {
     test=1;
 }
 } while (test);
+
+
+//FORMATTING FUNCTIONS
+//   Validating email address
+
+function isValidEmail(email) {
+    return /^[^@]+@[^@.]+\.[a-z]+$/i.test(email);  
+}
+     
