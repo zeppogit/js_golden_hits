@@ -119,7 +119,7 @@ calendar.innerHTML = js_html;
 
 //   PASSWORD CHECK  ///////////////////////
 
-const passwords = ['code2lou$', 'pw4codeLou', 'password1', '1']; /* declare acceptable passwords */
+const passwords = ['code2lou$', 'pw4codeLou', 'password1', '1']; // declare acceptable passwords 
 let message;
 let test;
 
@@ -140,6 +140,9 @@ if (passwords.includes(search) ) {
 //Newsletter sign up
 
 const emailInput = document.getElementById("email");
+
+let emailList = new Set();
+    
 
 //   Validating email address
 
@@ -170,3 +173,9 @@ function showOrHideTip(show, element) {
   
 //listener
 emailInput.addEventListener("input", createListener(isValidEmail));
+
+
+emailInput.addEventListener('submit', (event) => {
+           emailList.add(event.target.value);
+   });
+   
