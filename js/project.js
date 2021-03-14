@@ -147,6 +147,26 @@ function isValidEmail(email) {
     return /^[^@]+@[^@.]+\.[a-z]+$/i.test(email);  
 }
      
+//EVENTS
 
+function showOrHideTip(show, element) {
+    // show element when show is true, hide when false
+    if (show) {
+      element.style.display = "foot";
+    } else {
+      element.style.display = "none";
+    }
+  }
+  
+  function createListener(validator) {
+    return e => {
+      const text = e.target.value;
+      const valid = validator(text);
+      const showTip = text !== "" && !valid;
+      const tooltip = e.target.nextElementSibling;
+      showOrHideTip(showTip, tooltip);
+    };
+  }
+  
 //listener
 emailInput.addEventListener("input", createListener(isValidEmail));

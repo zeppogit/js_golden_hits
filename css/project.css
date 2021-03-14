@@ -113,6 +113,15 @@ div .logo {
 	text-align: left;
 }
 
+input[type="text"]:focus,
+{
+  background: #fff
+}
+
+input {
+	width: 30%;
+  }
+
 /* ================================= 
   Flex Box
 ==================================== */
