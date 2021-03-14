@@ -29,6 +29,6 @@ ADDITIONAL JAVASCRIPT:
 
 * Password prompt demonstrates use of a Javascript do-while loop to search an array of correct passwords. Allows further access to webpage if there is a match.
 
-* Implements a regular expression (regex) to ensure an email input field is always entered the same format
+* Implements a regular expression (regex) to ensure an email input field is always entered the same format.
 
 

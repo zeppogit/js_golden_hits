@@ -5,7 +5,7 @@ const hits = [
     {
     month: 'January',
     label_img: 'raindrops.jpg',
-    title: 'Raindrops Are Falling on My Head',
+    title: 'Raindrops Keep Falling on My Head',
     artist: 'B.J. Thomas',
     recording: 'raindrops.mp3'
     },
