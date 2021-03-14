@@ -18,13 +18,14 @@ This project utilizes the follow technology.
 
 * Main content section with a "calendar" of monthly hits:
 
-       -- demonstrates use of flexbox to expand vertical mobile alignment into rows as increased viewport space allows.
+       * demonstrates use of flexbox to expand vertical mobile alignment into rows as increased viewport space allows.
 
 
 ADDITIONAL JAVASCRIPT:
 
 * Main content section with a "calendar" of monthly hits:
-       -- demonstrates use of a JavaScript 'for' loop to access an array in order to adhere to D.R.Y. programming and eliminate repetitive code.
+
+       * demonstrates use of a JavaScript 'for' loop to access an array in order to adhere to D.R.Y. programming and eliminate repetitive code.
 
 * Password prompt demonstrates use of a Javascript do-while loop to search an array of correct passwords. Allows further access to webpage if there is a match.
 
