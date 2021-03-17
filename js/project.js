@@ -118,7 +118,7 @@ calendar.innerHTML = js_html;
 
 
 //   PASSWORD CHECK  ///////////////////////
-
+/*
 const passwords = ['code2lou$', 'pw4codeLou', 'password1', '1']; // declare acceptable passwords 
 let message;
 let test;
@@ -137,6 +137,8 @@ if (passwords.includes(search) ) {
 }
 } while (test);
 
+*/
+
 //Newsletter sign up
 
 const emailInput = document.getElementById("email");
@@ -148,6 +150,7 @@ let emailList = new Set();
 
 function isValidEmail(email) {
     return /^[^@]+@[^@.]+\.[a-z]+$/i.test(email);  
+     //alternate:  ^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
 }
      
 //EVENTS
