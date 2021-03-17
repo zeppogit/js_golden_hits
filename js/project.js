@@ -62,7 +62,7 @@ const hits = [
     month: 'September',
     label_img: 'war.jpg',
     title: 'War',
-    artist: 'Edwin Star',
+    artist: 'Edwin Starr',
     recording: 'war.mp3'
     },
     {month: 'October',
