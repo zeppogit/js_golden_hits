@@ -118,8 +118,8 @@ calendar.innerHTML = js_html;
 
 
 //   PASSWORD CHECK  ///////////////////////
-/*
-const passwords = ['code2lou$', 'pw4codeLou', 'password1', '1']; // declare acceptable passwords 
+
+const passwords = ['code2louX!', 'pw4codeLou##', 'CD4lou!EZ']; // declare acceptable passwords 
 let message;
 let test;
 
@@ -137,7 +137,7 @@ if (passwords.includes(search) ) {
 }
 } while (test);
 
-*/
+
 
 //Newsletter sign up
 
@@ -182,3 +182,119 @@ emailInput.addEventListener('submit', (event) => {
            emailList.add(event.target.value);
    });
    
+
+   /* ******TEST RANDOM IMAGE  ********* */
+const randomImg = document.querySelector('.randomImg');
+
+
+fetch('https://dog.ceo/api/breeds/image/random')
+//fetch('https://source.unsplash.com/random')
+//fetch('https://loremflicker.com/200/200')
+//fetch('img src="https://via.placeholder.com/200/200')
+    .then(response => response.json())
+    .then(data => generateImage(data.message))
+
+// HELPER FUNCTIONS
+
+function generateImage(data) {
+    const html = `
+      <img src='${data}' alt>
+      `
+      randomImg.innerHTML = html;
+  }
+
+// TESTING GET JSON:
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '../about.json');
+xhr.onreadystatechange = function () {
+  if(xhr.readyState === 4 && xhr.status === 200) {
+    var employees = JSON.parse(xhr.responseText);
+    var statusHTML = '<ul class="bulleted">';
+    for (var i=0; i<employees.length; i += 1) {
+      if (employees[i].inoffice === true) {
+        statusHTML += '<li class="in">';
+      } else {
+        statusHTML += '<li class="out">';
+      }
+      statusHTML += employees[i].name;
+      statusHTML += '</li>';
+    }
+    statusHTML += '</ul>';
+    document.getElementById('employeeList').innerHTML = statusHTML;
+  }
+};
+xhr.send();
+
+//divContainer.innerHTML = "INSERTED TEXT HERE";
+
+/*
+document.body.onload = addElement;
+
+function addElement () {
+    const newDiv = document.createElement("p");
+    const newContent = document.createTextNode(arrItems[1]);
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("go2top");
+    document.body.insertBefore(newDiv, currentDiv);
+}
+
+var divContainer = document.getElementById("showData");
+divContainer.innerHTML = "";
+divContainer.appendChild(table);
+
+//END MY TEST CODE
+*/
+
+//BEGIN EXAMPLE CODE
+// external JSON file JS //
+
+/*$(document).ready(function() {
+  $.getJSON("about.json", function(data) {
+
+      var arrItems = [];
+      $.each(data, function(index, value) {
+          arrItems.push(value);
+      });
+
+      var divContainer = document.getElementById("showData");
+    });
+     /*
+      var col = [];
+      for (var i = 0; i < arrItems.length; i++) {
+          for (var key in arrItems[i]) {
+              if (col.indexOf(key) === -1) {
+                  col.push(key);
+              }
+          }
+      }
+
+
+      var table = document.createElement("table");
+
+      var tr = table.insertRow(-1);
+
+      for (var i = 0; i < col.length; i++) {
+          var th = document.createElement("th");
+          th.innerHTML = col[i];
+          tr.appendChild(th);
+      }
+
+      for (var i = 0; i < arrItems.length; i++) {
+
+          tr = table.insertRow(-1);
+
+          for (var j = 0; j < col.length; j++) {
+              var tabCell = tr.insertCell(-1);
+              tabCell.innerHTML = arrItems[i][col[j]];
+          }
+      }
+
+      var divContainer = document.getElementById("showData");
+      divContainer.innerHTML = "INSERTED TEXT HERE";
+      //divContainer.innerHTML = arrItems[1];
+    divContainer.innerHTML = "";
+      divContainer.appendChild(table);
+      
+  }); 
+}); */
+

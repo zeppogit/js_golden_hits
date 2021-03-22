@@ -5,10 +5,7 @@ Golden Anniversary Hits website
 project for Code Louisville by Rick Sweeney
 
 Prompt for password:  accepts the following:
-    password1
-    code2lou$
-    pw4codeLou
-    1
+ 
 
 This project utilizes the follow technology.
 
