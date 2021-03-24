@@ -122,6 +122,46 @@ input {
 	width: 30%;
   }
 
+/* BEGIN  add image TEST ================ 
+==================================
+==================================
+===============!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.randomImg {
+	text-align: center;
+	border-radius: 6px;
+	background-color: #fff;
+	border: solid 2px #f0dce5;
+	padding: 20px;
+	margin-bottom: 24px; }
+	.randomImg img {
+	  border-radius: 4px;
+	  margin-bottom: 2.25rem;
+	  cursor: pointer;
+	  width: 100%; }
+	  
+
+.outer {
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box; }
+	
+/* Clearing
+–––––––––––––––––––––––––––––––––– */
+/* Self Clearing Goodness 
+.outer:after,
+	.row:after,
+	.u-cf {
+	content: "";
+	display: table;
+	clear: both; }
+	  */
+
+/*END TEST CSS    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
 /* ================================= 
   Flex Box
 ==================================== */
@@ -178,6 +218,10 @@ input {
 	height: 15px;
 }
 
+.button {
+	margin-left: 50px;
+	background: rgb(54, 189, 27);
+}
 
 
 /* ================================= 
