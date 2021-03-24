@@ -251,7 +251,7 @@ input {
 {
     width: 90%;
     margin: 0 auto;
-    max-width: 1150px;
+
 }
 
     .main-header,
@@ -272,6 +272,7 @@ input {
 	.main-header {
         flex-direction: row;
 		justify-content: space-between;
+		max-width: 1600px;
 	}
 
 }
