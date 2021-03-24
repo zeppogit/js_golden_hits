@@ -115,8 +115,56 @@ for (let i = 0; i < 12; i++ ) {
 
 calendar.innerHTML = js_html;
 
+//EVENT - more info
 
-//Newsletter sign up
+
+// external JSON file JS //
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'data/about.json');
+xhr.onreadystatechange = function () {
+  if(xhr.readyState === 4 && xhr.status === 200) {
+    var about = JSON.parse(xhr.responseText);
+    var moreHTML = '<div>';
+    for (var i=0; i<about.length; i += 1) {
+     // if (employees[i].inoffice === true) {
+      //  moreHTML += '<p>';
+      //} else {
+      //  statusHTML += '<li class="out">';
+      //}
+      moreHTML += about[i].Title;
+      moreHTML += '<p>';
+      moreHTML += about[i].About;
+      moreHTML += '</p>';
+      moreHTML += '</div>';
+    }
+    //statusHTML += '</ul>';
+    document.getElementById('more').innerHTML = moreHTML;
+  }
+};
+xhr.send();
+
+
+//divContainer.innerHTML = "INSERTED TEXT HERE";
+
+
+// FETCH WONT WORK WITH OUT NODE? NOT SURE HOW TO REQUIRE
+/*fetch('data/about.json')
+  .then((response) => response.json())
+  .then((json) => json.forEach(titleAndLyrics)
+  )
+
+function titleAndLyrics (element, index, arr){
+  arr[index] = document.querySelector('#more').innerHTML +=
+  `<h3>${element.Title}</h3>
+    <p>${element.Lyrics}</p>
+    `    // don't overlook this backtick
+}
+*/
+
+// listener
+
+// Newsletter sign up
 
 const emailInput = document.getElementById("email");
 
@@ -129,7 +177,7 @@ function isValidEmail(email) {
      //alternate:  ^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$
 }
      
-//EVENTS
+//EVENT - Newsletter signup
 
 function showOrHideTip(show, element) {
     // show element when show is true, hide when false
@@ -138,25 +186,30 @@ function showOrHideTip(show, element) {
     } else {
       element.style.display = "none";
     }
-  }
+}
   
-  function createListener(validator) {
-    return e => {
-      const text = e.target.value;
-      const valid = validator(text);
-      const showTip = text !== "" && !valid;
-      const tooltip = e.target.nextElementSibling;
-      showOrHideTip(showTip, tooltip);
-    };
-  }
+function createListener(validator) {
+  return e => {
+    const text = e.target.value;
+    const valid = validator(text);
+    const showTip = text !== "" && !valid;
+    const tooltip = e.target.nextElementSibling;
+    showOrHideTip(showTip, tooltip);
+  };
+}
   
+
+
 //listener
+
 emailInput.addEventListener("input", createListener(isValidEmail));
 
 
 emailInput.addEventListener('submit', (event) => {
            emailList.add(event.target.value);
    });
+
+
    
 // TEST INSERT HTML FROM JSON
 
