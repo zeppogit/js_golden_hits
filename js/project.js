@@ -127,12 +127,9 @@ xhr.onreadystatechange = function () {
     var about = JSON.parse(xhr.responseText);
     var moreHTML = '<div>';
     for (var i=0; i<about.length; i += 1) {
-     // if (employees[i].inoffice === true) {
-      //  moreHTML += '<p>';
-      //} else {
-      //  statusHTML += '<li class="out">';
-      //}
+      moreHTML += '<h3>';
       moreHTML += about[i].Title;
+      moreHTML += '</h3>';
       moreHTML += '<p>';
       moreHTML += about[i].About;
       moreHTML += '</p>';
