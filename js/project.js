@@ -109,8 +109,10 @@ for (let i = 0; i < 12; i++ ) {
                 <source src="mp3/${hit.recording}" type="audio/mp3">
             </audio> 
         </div>
-        <div class = "lyrics">
-          <button id="${hit.month}" onclick="sendAJAX()">About</button>  
+        <div>
+          <p>
+            <a href="#" >About</a>
+          </p>
         </div>
     </div> 
  `; 
