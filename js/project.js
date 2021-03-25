@@ -81,7 +81,7 @@ const hits = [
     {
     month: 'December',
     label_img: 'tearsofaclown.jpg',
-    title: 'Tears of A Clown',
+    title: 'The Tears of A Clown',
     artist: 'Smokey Robinson & The Miracles',
     recording: 'tearsofaclown.mp3'
     }                                                                                                                
