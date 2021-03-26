@@ -24,7 +24,7 @@ ADDITIONAL JAVASCRIPT:
 
        * demonstrates use of a JavaScript 'for' loop to access an array in order to adhere to D.R.Y. programming and eliminate repetitive code.
 
-* Reads and parses an external "about.json" file, displaying  data from that into the section providing more info about the hits.
+* Reads and parses an external "about.json" file, displaying  data from that into the section providing more info about the hits. (The json content is derived from Wikipedia pages for each song.)
 
 
 * Implements a regular expression (regex) to ensure an email input field is always entered the same format.
