@@ -111,7 +111,7 @@ for (let i = 0; i < 12; i++ ) {
         </div>
         <div>
           <p>
-            <a href="#" >About</a>
+            <a href="#${hit.month}" >About</a>
           </p>
         </div>
     </div> 
@@ -130,17 +130,17 @@ xhr.open('GET', 'data/about.json');
 xhr.onreadystatechange = function () {
   if(xhr.readyState === 4 && xhr.status === 200) {
     var about = JSON.parse(xhr.responseText);
-    var moreHTML = '<div>';
+    var moreHTML = `<div>`;
     for (var i=0; i<about.length; i += 1) {
-      moreHTML += '<h3>';
-      moreHTML += about[i].Title;
-      moreHTML += '</h3>';
-      moreHTML += '<p>';
-      moreHTML += about[i].About;
-      moreHTML += '</p>';
-      moreHTML += '</div>';
+      moreHTML += `
+        <h3 id="${about[i].Month}">${about[i].Title}</h3>
+        <p>${about[i].About}</p>
+        <a href="#${about[i].Month.toLowerCase()}">
+        Back
+        </a>
+      `
     }
-    //statusHTML += '</ul>';
+    moreHTML +=`</div>`;
     document.getElementById('more').innerHTML = moreHTML;
   }
 };

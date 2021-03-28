@@ -124,7 +124,7 @@ input {
 
 .email_label {
 	padding-left: 20px;
-	margin-right: 0px;
+	margin-right: 4px;
 }
 
 /* BEGIN  add image TEST ================ 
@@ -229,6 +229,7 @@ input {
 }
 
 .button2 {
+	margin-left: 20px;
 	background: rgb(54, 189, 27);
 }
 
@@ -238,6 +239,7 @@ h3 {
 
 #email {
 	padding-right: 0px;
+	display: inline-block;
 }
 
 .valid_msg {
