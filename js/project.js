@@ -213,5 +213,24 @@ emailInput.addEventListener('submit', (event) => {
 
 
    
-// TEST INSERT HTML FROM JSON
+// TEST post
+// HTML form JS //
+
+var form = document.getElementById("signup");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method: "POST",
+      body: new FormData(document.getElementById("signup")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+      alert('EMAIL ADDED TO NEWSLETTER MAILING LIST')
+      document.getElementById("signup").reset();
+ });
+});
+ // ADD TO README: view data at https://docs.google.com/spreadsheets/d/1OoYZho_UXJlyjP5lONTwaxg8aCnwWKE3fNa5fQYy1w8/edit#gid=0
+ // CHANGE ABOVE TO ASYNC AWAIT
+
+
 
