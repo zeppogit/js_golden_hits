@@ -29,4 +29,7 @@ ADDITIONAL JAVASCRIPT:
 
 * Implements a regular expression (regex) to ensure an email input field is always entered the same format.
 
+* CreateS a form and saves the value (on click of Submit button) to an external file . 
+   The storage of data can be viewed using link provided in project submission form, which confirms where that information is being stored and that it’s being saved/persisted  
+
 
