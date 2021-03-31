@@ -148,25 +148,6 @@ xhr.onreadystatechange = function () {
 xhr.send();
 
 
-//divContainer.innerHTML = "INSERTED TEXT HERE";
-
-
-// FETCH
-/*fetch('data/about.json')
-  .then((response) => response.json())
-  .then((json) => json.forEach(titleAndLyrics)
-  )
-
-function titleAndLyrics (element, index, arr){
-  arr[index] = document.querySelector('#more').innerHTML +=
-  `<h3>${element.Title}</h3>
-    <p>${element.Lyrics}</p>
-    `    // don't overlook this backtick
-}
-*/
-
-// listener
-
 // Newsletter sign up
 
 const emailInput = document.getElementById("email");
