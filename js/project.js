@@ -144,13 +144,14 @@ xhr.onreadystatechange = function () {
     document.getElementById('more').innerHTML = moreHTML;
   }
 };
+
 xhr.send();
 
 
 //divContainer.innerHTML = "INSERTED TEXT HERE";
 
 
-// FETCH WONT WORK WITH OUT NODE? NOT SURE HOW TO REQUIRE
+// FETCH
 /*fetch('data/about.json')
   .then((response) => response.json())
   .then((json) => json.forEach(titleAndLyrics)
@@ -202,35 +203,30 @@ function createListener(validator) {
   
 
 
-//listener
+//listeners:
 
 emailInput.addEventListener("input", createListener(isValidEmail));
 
 
 emailInput.addEventListener('submit', (event) => {
            emailList.add(event.target.value);
-   });
+});
 
 
-   
-// TEST post
-// HTML form JS //
+
+// HTML form JS:
 
 var form = document.getElementById("signup");
 form.addEventListener("submit", e => {
   e.preventDefault();
   fetch(form.action, {
       method: "POST",
-      body: new FormData(document.getElementById("signup")),
+      body: new FormData(form),
   }).then(
       response => response.json()
   ).then((html) => {
-      alert('EMAIL ADDED TO NEWSLETTER MAILING LIST')
+      alert('You have been added to the newsletter email list')
       document.getElementById("signup").reset();
  });
-});
- // ADD TO README: view data at https://docs.google.com/spreadsheets/d/1OoYZho_UXJlyjP5lONTwaxg8aCnwWKE3fNa5fQYy1w8/edit#gid=0
- // CHANGE ABOVE TO ASYNC AWAIT
-
-
+})
 
