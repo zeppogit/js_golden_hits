@@ -123,7 +123,7 @@ calendar.innerHTML = js_html;
 //EVENT - more info
 
 
-// external JSON file JS //
+// external JSON file JS 
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'data/about.json');
@@ -148,13 +148,13 @@ xhr.onreadystatechange = function () {
 xhr.send();
 
 
-// Newsletter sign up
+// NEWSLETTER SIGN UP *********************************************
 
 const emailInput = document.getElementById("email");
 
 let emailList = new Set();
 
-//   Validating email address
+    //  Validating email address
 
 function isValidEmail(email) {
     return /^[^@]+@[^@.]+\.[a-z]+$/i.test(email);  
@@ -182,8 +182,6 @@ function createListener(validator) {
   };
 }
   
-
-
 //listeners:
 
 emailInput.addEventListener("input", createListener(isValidEmail));
@@ -205,7 +203,7 @@ form.addEventListener("submit", e => {
       body: new FormData(form),
   }).then(
       response => response.json()
-  ).then((html) => {
+  ).then((data) => {
       alert('You have been added to the newsletter email list')
       document.getElementById("signup").reset();
   }).catch (error => {
