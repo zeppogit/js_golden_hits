@@ -208,6 +208,7 @@ form.addEventListener("submit", e => {
   ).then((html) => {
       alert('You have been added to the newsletter email list')
       document.getElementById("signup").reset();
- });
+  }).catch (error => {
+  console.log(error);
+  })
 })
-
