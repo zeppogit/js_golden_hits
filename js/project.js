@@ -1,4 +1,5 @@
 
+
 //  ARRAY OF JAVASCRIPT OBJECTS 
 
 const hits = [
